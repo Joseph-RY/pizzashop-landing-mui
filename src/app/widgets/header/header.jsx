@@ -30,7 +30,7 @@ const Header = () => {
         sx={{
           display: {
             xs: "none",
-            md: "block",
+            md: "flex",
           },
           gap: 10,
           color: "#A3A3A3",
