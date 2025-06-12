@@ -16,7 +16,8 @@ const Header = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#1E0C00",
+        background:
+          "linear-gradient(90deg, #1c0c00, #2b1102)",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
