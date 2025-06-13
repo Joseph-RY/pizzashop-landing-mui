@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PlayCircleFilledOutlinedIcon from "@mui/icons-material/PlayCircleFilledOutlined";
@@ -8,11 +8,6 @@ import { Box, Typography } from "@mui/material";
 import CustomTextSwitch from "../switcher/switche";
 
 export const Hero = () => {
-  const [checked, setChecked] = useState(false);
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
   return (
     <Box
       sx={{
@@ -58,12 +53,7 @@ export const Hero = () => {
               left: "15px",
             }}
           >
-            <Image
-              src="/arrow-way.png"
-              alt="arrow-way"
-              width={188}
-              height={55}
-            />
+            <Image src="/arrow-way.png" alt="arrow-way" width={188} height={55} />
           </Box>{" "}
           <br /> Pizza{" "}
           <Box
@@ -74,13 +64,7 @@ export const Hero = () => {
               height: "auto",
             }}
           >
-            <Image
-              src="/lightning.png"
-              alt="Lightning"
-              width={48}
-              height={84}
-              style={{ width: "100%", height: "auto" }}
-            />
+            <Image src="/lightning.png" alt="Lightning" width={48} height={84} style={{ width: "100%", height: "auto" }} />
           </Box>
           Delivery
         </Typography>
@@ -94,8 +78,7 @@ export const Hero = () => {
           }}
           variant="subtitle1"
         >
-          We will deliver juicy pizza for your family in 30 minutes, <br /> if
-          thecourier is late - {""}
+          We will deliver juicy pizza for your family in 30 minutes, <br /> if thecourier is late - {""}
           <Link sx={{ color: "#FFF" }} href="/">
             pizza is free!
           </Link>
@@ -141,9 +124,7 @@ export const Hero = () => {
                 background: "linear-gradient(90deg, #FFA228, #FF6432)",
               }}
             >
-              <PlayCircleFilledOutlinedIcon
-                sx={{ fontSize: "100px", cursor: "pointer", color: "#1E0C00" }}
-              />
+              <PlayCircleFilledOutlinedIcon sx={{ fontSize: "100px", cursor: "pointer", color: "#1E0C00" }} />
             </Box>
           </Box>
           <CustomTextSwitch />
@@ -153,18 +134,12 @@ export const Hero = () => {
         sx={{
           position: "relative",
           width: "100%",
-          maxWidth: 656,
+          maxWidth: 556,
           height: "auto",
           aspectRatio: "656 / 883",
         }}
       >
-        <Image
-          src="/hero-aside.png"
-          alt="Hero-aside"
-          layout="fill"
-          objectFit="contain"
-          priority
-        />
+        <Image src="/hero-aside.png" alt="Hero-aside" layout="fill" objectFit="contain" priority />
       </Box>
     </Box>
   );

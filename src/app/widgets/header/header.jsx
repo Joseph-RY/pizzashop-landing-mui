@@ -70,6 +70,7 @@ const Header = () => {
         <Button
           sx={{
             width: "163px",
+            height: "40px",
             background: "linear-gradient(90deg, #FFA228, #FF6432)",
             borderRadius: "700px",
             color: "#FFF",

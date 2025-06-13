@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 
 export default function SlidingToggle() {
-  const [selected, setSelected] = useState("toOrder");
+  const [selected, setSelected] = useState("pizzaMenu");
 
   return (
     <Box
@@ -55,7 +55,7 @@ export default function SlidingToggle() {
             top: 3,
             left: selected === "pizzaMenu" ? "3px" : "calc(50% + 3px)",
             width: "calc(50% - 6px)",
-            height: 56,
+            height: 58,
             background: "linear-gradient(90deg, #FFA228, #FF6432)",
             borderRadius: 31,
             boxShadow: "0 0 6px rgba(255, 100, 50, 0.7)",
