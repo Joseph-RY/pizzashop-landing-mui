@@ -1,51 +1,55 @@
+"use clint";
+
 import React from "react";
 import Image from "next/image";
 import { Box, Button, Typography } from "@mui/material";
 
-const pizzas = [
-  {
-    id: 1,
-    image: "/italian-pizza.png",
-    name: "Italian",
-    price: 8.35,
-  },
-  {
-    id: 2,
-    image: "/venecia-pizza.png",
-    name: "Venecia",
-    price: 7.35,
-  },
-  {
-    id: 3,
-    image: "/meat-pizza.png",
-    name: "Meat",
-    price: 9.35,
-  },
-  {
-    id: 4,
-    image: "/cheese-pizza.png",
-    name: "Meat",
-    price: 8.35,
-  },
-];
-
-const Pizza = () => {
+const Pizza = ({ data }) => {
   return (
     <Box
       sx={{
         display: "flex",
         gap: "40px",
         justifyContent: "space-between",
-        overflow: {
-          xs: "none",
-          xl: "scroll",
+        overflowX: {
+          xs: "scroll",
+          lg: "hidden",
         },
       }}
     >
-      {pizzas.map((e) => {
+      {data.map((e) => {
         return (
-          <Box key={e.id} sx={{ backgroundColor: "#210A01", borderRadius: "30px", padding: "30px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: "15px" }}>
-            <Image src={e.image} alt={e.name} width={159} height={157} />
+          <Box
+            key={e.id}
+            sx={{
+              position: "relative",
+              width: {
+                xs: "auto",
+                lg: "20%",
+              },
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "15px",
+              padding: "150px 30px 30px 30px",
+              backgroundColor: "#210A01",
+              borderRadius: "30px",
+              textAlign: "center",
+              marginTop: "90px",
+            }}
+          >
+            <Image
+              src={e.image}
+              alt={e.name}
+              width={259}
+              height={257}
+              style={{
+                position: "absolute",
+                top: "-120px",
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
+            />
             <Typography
               sx={{
                 fontSize: "25px",
@@ -56,7 +60,10 @@ const Pizza = () => {
             >
               {e.name}
             </Typography>
-            <Typography sx={{ fontSize: "14px", color: "#A3A3A3" }} variant="subtitle1">
+            <Typography
+              sx={{ textAlign: "start", fontSize: "14px", color: "#A3A3A3" }}
+              variant="subtitle1"
+            >
               Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...
             </Typography>
             <Box
@@ -69,18 +76,66 @@ const Pizza = () => {
                 width: "100%",
               }}
             >
-              <Box sx={{ cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", paddingBlock: "14px", paddingInline: "14px", border: "2px solid #A3A3A3", borderRadius: "50%", width: "40px", height: "40px" }}>
-                <Typography sx={{ fontSize: "14px", color: "#A3A3A3" }} variant="subtitle1">
+              <Box
+                sx={{
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  paddingBlock: "14px",
+                  paddingInline: "14px",
+                  border: "2px solid #A3A3A3",
+                  borderRadius: "50%",
+                  width: "40px",
+                  height: "40px",
+                }}
+              >
+                <Typography
+                  sx={{ fontSize: "14px", color: "#A3A3A3" }}
+                  variant="subtitle1"
+                >
                   22
                 </Typography>
               </Box>
-              <Box sx={{ cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", paddingBlock: "14px", paddingInline: "14px", background: "linear-gradient(90deg, #FFA228, #FF6432)", borderRadius: "50%", width: "40px", height: "40px" }}>
-                <Typography sx={{ fontSize: "14px", color: "#FFF" }} variant="subtitle1">
+              <Box
+                sx={{
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  paddingBlock: "14px",
+                  paddingInline: "14px",
+                  background: "linear-gradient(90deg, #FFA228, #FF6432)",
+                  borderRadius: "50%",
+                  width: "40px",
+                  height: "40px",
+                }}
+              >
+                <Typography
+                  sx={{ fontSize: "14px", color: "#FFF" }}
+                  variant="subtitle1"
+                >
                   28
                 </Typography>
               </Box>
-              <Box sx={{ cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", paddingBlock: "14px", paddingInline: "14px", border: "2px solid #A3A3A3", borderRadius: "50%", width: "40px", height: "40px" }}>
-                <Typography sx={{ fontSize: "14px", color: "#A3A3A3" }} variant="subtitle1">
+              <Box
+                sx={{
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  paddingBlock: "14px",
+                  paddingInline: "14px",
+                  border: "2px solid #A3A3A3",
+                  borderRadius: "50%",
+                  width: "40px",
+                  height: "40px",
+                }}
+              >
+                <Typography
+                  sx={{ fontSize: "14px", color: "#A3A3A3" }}
+                  variant="subtitle1"
+                >
                   33
                 </Typography>
               </Box>
@@ -111,24 +166,78 @@ const Pizza = () => {
                 + Ingredients
               </Button>
             </Box>
-            <Box sx={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
               <Box sx={{ display: "flex", color: "#FFF", gap: "2px" }}>
-                <Typography sx={{ fontWeight: 600, fontSize: "25px" }} variant="subtitle1">
+                <Typography
+                  sx={{ fontWeight: 600, fontSize: "25px" }}
+                  variant="subtitle1"
+                >
                   {e.price}
                 </Typography>
-                <Typography sx={{ fontWeight: 600, fontSize: "18px" }}>$</Typography>
+                <Typography sx={{ fontWeight: 600, fontSize: "18px" }}>
+                  $
+                </Typography>
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                <Box sx={{ cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", paddingBlock: "9px", paddingInline: "9px", border: "2px solid #A3A3A3", borderRadius: "50%", width: "30px", height: "30px" }}>
-                  <Typography sx={{ fontSize: "14px", color: "#A3A3A3" }} variant="subtitle1">
-                    -
+                <Box
+                  sx={{
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    paddingBlock: "9px",
+                    paddingInline: "9px",
+                    border: "2px solid #A3A3A3",
+                    borderRadius: "50%",
+                    width: "30px",
+                    height: "30px",
+                  }}
+                >
+                  <Typography
+                    sx={{ fontSize: "14px", color: "#A3A3A3" }}
+                    variant="subtitle1"
+                  >
+                    <Box
+                      sx={{
+                        width: "8px",
+                        height: "2px",
+                        backgroundColor: "#A3A3A3",
+                        borderRadius: "1px",
+                      }}
+                    />
                   </Typography>
                 </Box>
-                <Typography sx={{ fontSize: "30px", color: "#A3A3A3" }} variant="subtitle1">
+                <Typography
+                  sx={{ fontSize: "30px", color: "#A3A3A3" }}
+                  variant="subtitle1"
+                >
                   1
                 </Typography>
-                <Box sx={{ cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", paddingBlock: "9px", paddingInline: "9px", background: "linear-gradient(90deg, #FFA228, #FF6432)", borderRadius: "50%", width: "30px", height: "30px" }}>
-                  <Typography sx={{ fontSize: "14px", color: "#FFF" }} variant="subtitle1">
+                <Box
+                  sx={{
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    paddingBlock: "9px",
+                    paddingInline: "9px",
+                    background: "linear-gradient(90deg, #FFA228, #FF6432)",
+                    borderRadius: "50%",
+                    width: "30px",
+                    height: "30px",
+                  }}
+                >
+                  <Typography
+                    sx={{ fontSize: "20px", fontWeight: 500, color: "#FFF" }}
+                    variant="subtitle1"
+                  >
                     +
                   </Typography>
                 </Box>

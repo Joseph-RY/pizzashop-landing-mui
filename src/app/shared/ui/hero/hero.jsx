@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PlayCircleFilledOutlinedIcon from "@mui/icons-material/PlayCircleFilledOutlined";
 import { Box, Typography } from "@mui/material";
-import CustomTextSwitch from "../switcher/switche";
+import CustomTextSwitch from "../switcher/switcher";
 
 export const Hero = () => {
   return (

@@ -10,16 +10,25 @@ export default function MenuButtons() {
 
   const getButtonStyles = (category) => ({
     width: {
-      xs: "150px",
+      xs: "140px",
       lg: "163px",
     },
-    height: "58px",
-    fontSize: "16px",
+    height: {
+      xs: "38px",
+      lg: "58px",
+    },
+    fontSize: {
+      xs: "12px",
+      lg: "16px",
+    },
     fontWeight: 600,
     textTransform: "none",
     borderRadius: "700px",
     color: "#FFF",
-    background: category === activeCategory ? "linear-gradient(90deg, #FFA228, #FF6432)" : "linear-gradient(90deg, #1c0c00, #2b1102)",
+    background:
+      category === activeCategory
+        ? "linear-gradient(90deg, #FFA228, #FF6432)"
+        : "linear-gradient(90deg, #1c0c00, #2b1102)",
     boxShadow: category === activeCategory ? "none" : "0 0 6px #ff6432",
   });
 
@@ -38,10 +47,15 @@ export default function MenuButtons() {
         gap: "24px",
         paddingnBlock: "40px",
         marginBlock: "40px",
+        marginBottom: "55px",
       }}
     >
       {butttons.map((e) => (
-        <Button key={e} onClick={() => setActiveCategory(e)} sx={getButtonStyles(e)}>
+        <Button
+          key={e}
+          onClick={() => setActiveCategory(e)}
+          sx={getButtonStyles(e)}
+        >
           {e}
         </Button>
       ))}
