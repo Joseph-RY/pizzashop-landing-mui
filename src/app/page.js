@@ -1,14 +1,15 @@
 import React from "react";
-import { Box } from "@mui/material";
 import { Hero } from "./shared/ui/hero/hero";
 import { Menu } from "./shared/ui/menu/menu";
+import { Events } from "./shared/ui/events/event";
 
 const Home = () => {
   return (
-    <Box>
+    <>
       <Hero />
       <Menu />
-    </Box>
+      <Events />
+    </>
   );
 };
 
