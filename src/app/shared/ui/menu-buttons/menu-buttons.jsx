@@ -11,15 +11,15 @@ export default function MenuButtons() {
   const getButtonStyles = (category) => ({
     width: {
       xs: "140px",
-      lg: "163px",
+      md: "163px",
     },
     height: {
       xs: "38px",
-      lg: "58px",
+      md: "58px",
     },
     fontSize: {
       xs: "12px",
-      lg: "16px",
+      md: "16px",
     },
     fontWeight: 600,
     textTransform: "none",
@@ -38,11 +38,11 @@ export default function MenuButtons() {
         display: "flex",
         justifyContent: {
           xs: "start",
-          lg: "center",
+          md: "center",
         },
         flexWrap: {
           xs: "wrap",
-          lg: "nowrap",
+          md: "nowrap",
         },
         gap: "24px",
         paddingnBlock: "40px",

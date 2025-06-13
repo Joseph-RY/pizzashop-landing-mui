@@ -6,7 +6,7 @@ export function Events() {
       sx={{
         paddingInline: {
           xs: "10px",
-          lg: "3%",
+          md: "3%",
         },
         paddingBlock: "100px",
         background: "linear-gradient(90deg, #1c0c00, #2b1102)",
@@ -23,7 +23,7 @@ export function Events() {
           marginBlock: "40px",
           display: {
             xs: "block",
-            lg: "none",
+            md: "none",
           },
         }}
       >
@@ -149,7 +149,7 @@ export function Events() {
                 sx={{
                   display: {
                     xs: "none",
-                    lg: "block",
+                    md: "block",
                   },
                 }}
               >

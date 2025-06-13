@@ -11,7 +11,7 @@ const MenuBanner = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: {
           xs: "none",
-          lg: "cover",
+          md: "cover",
         },
         borderRadius: "35px",
         width: "100%",
@@ -28,7 +28,7 @@ const MenuBanner = () => {
           textAlign: "center",
           fontSize: {
             xs: "32px",
-            lg: "44px",
+            md: "44px",
           },
           fontWeight: 500,
           color: "#FFF",

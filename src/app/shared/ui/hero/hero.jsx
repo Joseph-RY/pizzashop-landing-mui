@@ -19,7 +19,7 @@ export const Hero = () => {
         justifyContent: "space-between",
         flexDirection: {
           xs: "column-reverse",
-          lg: "row",
+          md: "row",
         },
       }}
     >
@@ -34,7 +34,7 @@ export const Hero = () => {
           sx={{
             fontSize: {
               xs: "48px",
-              lg: "69px",
+              md: "69px",
             },
             fontWeight: "800",
             color: "#FFF",
@@ -46,7 +46,7 @@ export const Hero = () => {
             sx={{
               display: {
                 xs: "none",
-                lg: "inline",
+                md: "inline",
               },
               position: "relative",
               top: "25px",
@@ -72,7 +72,7 @@ export const Hero = () => {
           sx={{
             fontSize: {
               xs: "14px",
-              lg: "20px",
+              md: "20px",
             },
             color: "#A3A3A3",
           }}
@@ -88,7 +88,7 @@ export const Hero = () => {
             sx={{
               fontSize: {
                 xs: "14px",
-                lg: "20px",
+                md: "20px",
               },
               color: "#A3A3A3",
               marginBottom: "25px",

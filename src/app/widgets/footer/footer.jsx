@@ -37,7 +37,7 @@ const Footer = () => {
             xs: "58px",
             md: "84px",
             xl: "154px",
-            lg: "254px",
+            md: "254px",
           },
         }}
       >

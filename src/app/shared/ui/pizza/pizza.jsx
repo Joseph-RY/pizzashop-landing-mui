@@ -13,7 +13,7 @@ const Pizza = ({ data }) => {
         justifyContent: "space-between",
         overflowX: {
           xs: "scroll",
-          lg: "hidden",
+          md: "hidden",
         },
       }}
     >
@@ -25,7 +25,7 @@ const Pizza = ({ data }) => {
               position: "relative",
               width: {
                 xs: "auto",
-                lg: "20%",
+                md: "20%",
               },
               display: "flex",
               flexDirection: "column",
@@ -71,7 +71,7 @@ const Pizza = ({ data }) => {
                 display: "flex",
                 justifyContent: {
                   xs: "space-between",
-                  lg: "space-evenly",
+                  md: "space-evenly",
                 },
                 width: "100%",
               }}
